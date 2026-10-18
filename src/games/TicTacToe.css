@@ -1,0 +1,163 @@
+
+.tic-tac-toe {
+  position: relative;
+  z-index: 1;
+  width: min(92%, 460px);
+  margin: 24px auto;
+  padding: 24px;
+  text-align: center;
+  color: #ffffff;
+  background: rgba(15, 18, 40, 0.96);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 28px rgba(139, 92, 246, 0.2);
+}
+
+.tic-tac-toe h1 {
+  margin: 20px 0 8px;
+  padding: 0;
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  line-height: 1.2;
+  color: #c4b5fd;
+  background: none;
+  -webkit-text-fill-color: #c4b5fd;
+  text-shadow: 0 0 14px rgba(139, 92, 246, 0.55);
+}
+
+.tic-tac-toe p {
+  margin: 0;
+}
+
+.ttt-back,
+.ttt-reset,
+.ttt-mode {
+  margin: 0;
+  padding: 11px 16px;
+  border: 1px solid rgba(196, 181, 253, 0.4);
+  border-radius: 10px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.ttt-back {
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.ttt-back:hover,
+.ttt-reset:hover,
+.ttt-mode:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.45);
+}
+
+.ttt-subtitle {
+  color: #b9c2d9;
+  margin-bottom: 20px !important;
+}
+
+.ttt-modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.ttt-mode {
+  min-width: 0;
+  padding: 12px 8px;
+  background: rgba(30, 41, 75, 0.85);
+  font-size: 0.85rem;
+}
+
+.ttt-mode.active {
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+  border-color: #67e8f9;
+  box-shadow: 0 0 14px rgba(103, 232, 249, 0.2);
+}
+
+.ttt-status {
+  min-height: 28px;
+  margin: 20px 0 !important;
+  color: #67e8f9;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto 24px;
+}
+
+.tic-tac-toe .ttt-cell {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(103, 232, 249, 0.45);
+  border-radius: 14px;
+  background: rgba(30, 41, 75, 0.95);
+  color: #ffffff;
+  font-size: clamp(2rem, 9vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tic-tac-toe .ttt-cell:not(:disabled):hover {
+  background: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 15px rgba(103, 232, 249, 0.25);
+}
+
+.tic-tac-toe .ttt-cell:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.tic-tac-toe .ttt-cell.ttt-x {
+  color: #67e8f9;
+  text-shadow: 0 0 15px rgba(103, 232, 249, 0.65);
+}
+
+.tic-tac-toe .ttt-cell.ttt-o {
+  color: #c4b5fd;
+  text-shadow: 0 0 15px rgba(196, 181, 253, 0.65);
+}
+
+.ttt-reset {
+  min-width: 170px;
+}
+
+@media (max-width: 420px) {
+  .tic-tac-toe {
+    padding: 18px 14px;
+  }
+
+  .ttt-board {
+    gap: 7px;
+  }
+
+  .ttt-modes {
+    gap: 7px;
+  }
+
+  .ttt-mode {
+    font-size: 0.78rem;
+  }
+
+  .tic-tac-toe .ttt-cell {
+    border-radius: 10px;
+  }
+}

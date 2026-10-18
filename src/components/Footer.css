@@ -1,0 +1,129 @@
+
+.site-footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 50px;
+  padding: 45px 6% 18px;
+  color: #e2e8f0;
+  background: rgba(8, 12, 30, 0.96);
+  border-top: 1px solid rgba(139, 92, 246, 0.45);
+  box-shadow: 0 -8px 30px rgba(139, 92, 246, 0.08);
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr 1fr;
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h2 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+  color: #c4b5fd;
+}
+
+.footer-brand p {
+  margin: 0 0 12px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.footer-brand span {
+  color: #22d3ee;
+  font-size: 0.9rem;
+}
+
+.footer-content h3 {
+  margin: 0 0 15px;
+  color: #67e8f9;
+  font-size: 1.05rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-links button {
+  margin: 0;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links button:hover {
+  color: #22d3ee;
+  transform: none;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 35px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 35px 6% 18px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-links .footer-page-link {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links .footer-page-link:hover {
+  color: #22d3ee;
+  text-decoration: none;
+  transform: none;
+}

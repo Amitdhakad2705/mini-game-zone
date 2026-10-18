@@ -1,0 +1,105 @@
+
+.rps-game {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(94%, 520px);
+  margin: 24px auto;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  background: rgba(15, 18, 40, 0.96);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  border-radius: 24px;
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.18);
+}
+
+.rps-game h1 {
+  color: #c4b5fd;
+  font-size: clamp(26px, 5vw, 38px);
+}
+
+.rps-game p {
+  color: #cbd5e1;
+}
+
+.rps-game button {
+  padding: 10px 16px;
+  margin: 5px;
+  color: #fff;
+  background: #6d28d9;
+  border: 1px solid #a78bfa;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rps-game button:hover {
+  background: #7c3aed;
+}
+
+.rps-choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.rps-game .rps-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(85px, 22vw, 120px);
+  height: clamp(85px, 22vw, 120px);
+  gap: 8px;
+  background: #272344;
+  border-radius: 16px;
+}
+
+.rps-choice span {
+  font-size: clamp(30px, 7vw, 42px);
+}
+
+.rps-choice small {
+  font-size: 13px;
+}
+
+.rps-result {
+  padding: 12px;
+  background: rgba(39, 35, 68, 0.65);
+  border-radius: 14px;
+}
+
+.rps-result h2 {
+  color: #67e8f9;
+}
+
+.rps-score {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.rps-score div {
+  min-width: 75px;
+  padding: 10px;
+  background: #272344;
+  border-radius: 12px;
+}
+
+.rps-score strong {
+  display: block;
+  margin-top: 5px;
+  color: #67e8f9;
+  font-size: 22px;
+}
+
+@media (max-width: 400px) {
+  .rps-game {
+    padding: 16px;
+  }
+}
+
