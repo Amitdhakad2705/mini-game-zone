@@ -64,7 +64,8 @@ function Footer() {
           © {new Date().getFullYear()} Mini Game Zone.
           All rights reserved.
         </p>
-        <p>Made with ❤️ for gamers</p>
+        <p>Made with ❤️ for gamers</p><br />
+        <p>@amitdhakad</p>
       </div>
     </footer>
   )

@@ -4,18 +4,7 @@ import './GamesSection.css'
 import { useNavigate } from 'react-router-dom'
 
 const games = [
-  {
-    id: 1,
-    icon: '🔢',
-    title: 'Guess the Number',
-    description: 'Guess the secret number!',
-  },
-  {
-    id: 2,
-    icon: '✊',
-    title: 'Rock Paper Scissors',
-    description: 'Challenge the computer!',
-  },
+
   {
     id: 3,
     icon: '⭕',
@@ -28,6 +17,18 @@ const games = [
   title: '2048 Puzzle',
   description: 'Merge tiles and reach 2048!',
 },
+{
+    id: 1,
+    icon: '🔢',
+    title: 'Guess the Number',
+    description: 'Guess the secret number!',
+  },
+  {
+    id: 2,
+    icon: '✊',
+    title: 'Rock Paper Scissors',
+    description: 'Challenge the computer!',
+  },
 ]
 
 
@@ -43,9 +44,9 @@ const handlePlay = (gameTitle) => {
     navigate('/games/guess-number')
   } else if (gameTitle === 'Rock Paper Scissors') {
     navigate('/games/rock-paper-scissors')
-  }else if (gameTitle === 'Tic-Tac-Toe') {
-  navigate('/games/tic-tac-toe')
-  }else {
+  } else if (gameTitle === 'Tic-Tac-Toe') {
+    navigate('/games/tic-tac-toe')
+  } else {
     alert(`${gameTitle} will be available soon!`)
   }
 }
