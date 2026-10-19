@@ -33,7 +33,7 @@ function Navbar() {
 
         <div className="brand-text">
           <span className="brand-name">Mini Game Zone</span>
-          <span className="brand-tagline">AMIT'S GAMING WORLD</span>
+          <span className="brand-tagline">AMIT GAMING WORLD</span>
         </div>
       </Link>
 
