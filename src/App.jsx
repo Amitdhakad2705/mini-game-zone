@@ -16,6 +16,8 @@ import About from './pages/About'
 
 import { Routes, Route } from 'react-router-dom'
 
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 function HomePage() {
   const scrollToGames = () => {
@@ -122,7 +124,7 @@ function App() {
   return (
     <>
       <BackgroundAnimation />
-
+      
       <Routes>
         {/* Home page: Navbar sirf yahan dikhega */}
         <Route
@@ -160,7 +162,8 @@ function App() {
           path="/games/tic-tac-toe"
           element={<TicTacToe />}
         />
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         {/* Invalid URL */}
         <Route
           path="*"

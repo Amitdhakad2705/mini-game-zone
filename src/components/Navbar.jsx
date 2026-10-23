@@ -37,32 +37,42 @@ function Navbar() {
         </div>
       </Link>
 
-      <button
-        type="button"
-        className="menu-toggle"
-        onClick={() => setMenuOpen(previous => !previous)}
-        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-        aria-expanded={menuOpen}
-      >
-        {menuOpen ? '✕' : '☰'}
-      </button>
-
-      <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <Link to="/" onClick={closeMenu}>
-          Home
-        </Link>
+      <div className="nav-links-desktop">
+        <Link to="/" onClick={closeMenu}>Home</Link>
 
         <a href="/#games" onClick={event => goToSection(event, 'games')}>
           Games
         </a>
 
-        <Link to="/stats" onClick={closeMenu}>
-          My Stats
-        </Link>
+        <Link to="/stats" onClick={closeMenu}>My Stats</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+      </div>
 
-        <Link to="/about" onClick={closeMenu}>
-          About
+      <div className="navbar-actions">
+        <button
+          type="button"
+          className="menu-toggle"
+          onClick={() => setMenuOpen(previous => !previous)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? '✕' : '☰'}
+        </button>
+
+        <Link to="/login" className="login-button" onClick={closeMenu}>
+          Login
         </Link>
+      </div>
+
+      <div className={`nav-links-mobile ${menuOpen ? 'active' : ''}`}>
+        <Link to="/" onClick={closeMenu}>Home</Link>
+
+        <a href="/#games" onClick={event => goToSection(event, 'games')}>
+          Games
+        </a>
+
+        <Link to="/stats" onClick={closeMenu}>My Stats</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
       </div>
     </nav>
   )
